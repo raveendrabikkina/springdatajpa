@@ -2,7 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: springdatajpa
+  #Used for service to discover
+  labels:
+    mylabel: springdatajpa
 spec:
   containers:
     - name: springdatajpa
       image: raveendrabikkina/springdatajpa:version1.0
+  imagePullSecrets:
+    - name: regcred
