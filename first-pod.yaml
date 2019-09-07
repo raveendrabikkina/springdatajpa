@@ -5,9 +5,27 @@ metadata:
   #Used for service to discover
   labels:
     mylabel: springdatajpa
+    release: "1.0"
 spec:
   containers:
     - name: springdatajpa
       image: raveendrabikkina/springdatajpa:version1.0
+  imagePullSecrets:
+    - name: regcred
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: springdatajpaversion2.0
+  #Used for service to discover
+  labels:
+    mylabel: springdatajpa
+    release: "2.0"
+spec:
+  containers:
+    - name: springdatajpa
+      image: raveendrabikkina/springdatajpa:version2.0
   imagePullSecrets:
     - name: regcred
