@@ -9,6 +9,7 @@ spec:
     # Loadbalance traffic across Pods matching this label selector
     #KeyValuePair mylabel:springdatajpa mylabel is defined in first-pod.yaml
     mylabel: springdatajpa
+    release: "1.0"
 
   ports:
     # Accept traffic sent to port 80 similar to -p arg in docker
