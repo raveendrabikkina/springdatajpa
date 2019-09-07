@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: springdatajpa
+  name: springdatajpaversion1.0
   #Used for service to discover
   labels:
     mylabel: springdatajpa
